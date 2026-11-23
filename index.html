@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erich C. Gerero | CS Student Portfolio</title>
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#0e0420">
+    <meta name="description"
+        content="Portfolio of Erich C. Gerero, a Computer Science student learning web development and technology.">
+
+    <!-- Link to our CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Marks the page as "JavaScript is on". The CSS uses this so the site still works without JavaScript. -->
+    <script>
+        document.documentElement.classList.add('js');
+        // Safety net: if script.js did not load (wrong name, not saved, or an error),
+        // show all the content anyway instead of leaving the page empty.
+        setTimeout(function () {
+            if (!document.documentElement.classList.contains('js-ready')) {
+                document.documentElement.classList.remove('js');
+            }
+        }, 2500);
+    </script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#home">Skip to main content</a>
+
+    <!-- ===================== NAVIGATION ===================== -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a href="#home" class="brand">My<span>Portfolio</span></a>
+
+            <!-- Hamburger button (only shown on small screens when JavaScript is on) -->
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"
+                aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link" data-tip="Go to Home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-tip="Learn about me">About</a></li>
+                <li><a href="#projects" class="nav-link" data-tip="See my projects">Projects</a></li>
+                <li><a href="#certificates" class="nav-link" data-tip="See my certificates">Certificates</a></li>
+                <li><a href="#ojt" class="nav-link" data-tip="See my OJT experience">OJT</a></li>
+                <li><a href="#skills" class="nav-link" data-tip="See my skills">Skills</a></li>
+                <li><a href="#contact" class="nav-link" data-tip="Contact me">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ===================== A. HOME / INTRODUCTION ===================== -->
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <p class="eyebrow">Hello, I am</p>
+                    <h1>Erich C. Gerero</h1>
+                    <p class="hero-role">BS Computer Science Student &bull; Sorsogon State University – Bulan Campus</p>
+                    <p class="hero-intro">
+                        I am a Computer Science student who is learning web development and technology.
+                        I enjoy programming, web design, and finding simple ways to solve problems with code.
+                        I am always practicing new skills and building projects to improve.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Projects</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                </div>
+
+                <div class="hero-photo">
+                    <img src="images/profile.jpg" alt="Profile photo of Erich C. Gerero"
+                        data-placeholder="Add your photo: images/profile.jpg" width="320" height="320">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== ABOUT ME ===================== -->
+        <section id="about" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+
+                <div class="about-grid">
+
+                    <!-- Left: story about you -->
+                    <article class="card about-story">
+                        <div class="card-body">
+                                                        <h3>Who I Am</h3>
+                            <p>
+                                I am Erich C. Gerero, a BS Computer Science student at Sorsogon State University – Bulan Campus.
+                                I am learning web development and technology, and I like turning ideas into working
+                                websites and programs.
+                            </p>
+                            <p>
+                                My interest in computer science started when I saw how a few lines of code can become a real website
+                                or app.
+                                Right now I enjoy learning HTML, CSS, JavaScript, and Python, and I practice by building
+                                small projects.
+                                I want to improve my problem-solving, write cleaner code, and learn how to work well in
+                                a team.
+                            </p>
+
+                            <h4>My Goals</h4>
+                            <ul>
+                                <li>Build more real projects and share them on GitHub.</li>
+                                <li>Finish my degree with strong grades and useful skills.</li>
+                                <li>Start my career as a web developer or software engineer.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Right: quick facts and interests -->
+                    <article class="card about-facts">
+                        <div class="card-body">
+                            <h3>Quick Facts</h3>
+                            <dl class="facts">
+                                <div>
+                                    <dt>Name</dt>
+                                    <dd>Erich C. Gerero</dd>
+                                </div>
+                                <div>
+                                    <dt>Course</dt>
+                                    <dd>BS Computer Science</dd>
+                                </div>
+                                <div>
+                                    <dt>School</dt>
+                                    <dd>Sorsogon State University – Bulan Campus</dd>
+                                </div>
+                                <div>
+                                    <dt>Location</dt>
+                                    <dd>Bulan, Sorsogon, Philippines</dd>
+                                </div>
+                                <div>
+                                    <dt>Languages</dt>
+                                    <dd>Filipino, English</dd>
+                                </div>
+                            </dl>
+
+                            <h4>My Interests</h4>
+                            <div class="tags">
+                                <span class="tag">Programming</span>
+                                <span class="tag">Web Design</span>
+                                <span class="tag">Technology</span>
+                                <span class="tag">Problem-Solving</span>
+                                <span class="tag">Learning New Tools</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== B. MY PROJECTS ===================== -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">My Projects</h2>
+
+                <div class="card-grid">
+
+                    <!-- PROJECT CARD 1 -->
+                    <article class="card project-card">
+                        <img class="card-img" src="images/project-1.png" alt="Screenshot of the EduSync home page" data-placeholder="Add screenshot: images/project-1.png" width="600" height="360">
+                        <div class="card-body">
+                            <h3>EduSync</h3>
+                            <p>A web platform for students to track tasks, visualize their schedule, manage study time, and monitor their progress in one place.</p>
+                            <h4>Main Features</h4>
+                            <ul>
+                                <li>Home page with Log in and Register</li>
+                                <li>Task tracking and schedule visualization</li>
+                                <li>Study time management and progress monitoring</li>
+                            </ul>
+                            <h4>Technologies Used</h4>
+                            <div class="tags">
+                                <span class="tag">[Add technologies used]</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT CARD 2 -->
+                    <article class="card project-card">
+                        <img class="card-img" src="images/project-2.png" alt="Screenshot of the Bioluminescent Adventure game menu" data-placeholder="Add screenshot: images/project-2.png" width="600" height="360">
+                        <div class="card-body">
+                            <h3>Bioluminescent Adventure (Game)</h3>
+                            <p>A glowing 2D adventure game with a main menu where the player can choose a world, play an endless run, or fight in boss rush.</p>
+                            <h4>Main Features</h4>
+                            <ul>
+                                <li>Three game modes: Choose World, Endless Run, Boss Rush</li>
+                                <li>Jump, dash, attack, and pause controls (keyboard and on-screen)</li>
+                                <li>Game HUD with energy bar, score, coins, and trophies</li>
+                            </ul>
+                            <h4>Technologies Used</h4>
+                            <div class="tags">
+                                <span class="tag">[Add technologies used]</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT CARD 3 -->
+                    <article class="card project-card">
+                        <img class="card-img" src="images/project-3.png" alt="Screenshot of this portfolio website" data-placeholder="Add screenshot: images/project-3.png" width="600" height="360">
+                        <div class="card-body">
+                            <h3>Personal Portfolio Website</h3>
+                            <p>My own portfolio website that shows my profile, certificates, OJT experience, and skills in one place.</p>
+                            <h4>Main Features</h4>
+                            <ul>
+                                <li>Responsive layout that works on phones and computers</li>
+                                <li>Clean purple and pink design with a simple layout</li>
+                                <li>Certificate image viewer and contact form with validation</li>
+                            </ul>
+                            <h4>Technologies Used</h4>
+                            <div class="tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <h4>What I Learned</h4>
+                            <p>How to organize a multi-section website, make it responsive, and use JavaScript for interactive features.</p>
+                        </div>
+                    </article>
+
+                    <!-- TIP: To add another project, copy the whole <article> block above and paste it here. -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== C. CERTIFICATES ===================== -->
+        <section id="certificates" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Certificates</h2>
+
+                <div class="card-grid">
+
+                    <!-- CERTIFICATE 1 -->
+                    <article class="card cert-card">
+                        <!-- Clicking this button opens the large image viewer -->
+                        <button type="button" class="cert-thumb" data-full="images/certificate-1.png"
+                            data-caption="Introduction to HTML - SoloLearn"
+                            aria-label="Open certificate 1 in a larger view">
+                            <img src="images/certificate-1.png" alt="SoloLearn certificate: Introduction to HTML"
+                                data-placeholder="Add certificate: images/certificate-1.png" width="600" height="420">
+                        </button>
+                        <div class="card-body">
+                                                        <h3>Introduction to HTML</h3>
+                            <p class="meta"><strong>Issued by:</strong> SoloLearn</p>
+                            <p class="meta"><strong>Completed:</strong> December 2025</p>
+                        </div>
+                    </article>
+
+                    <!-- CERTIFICATE 2 -->
+                    <article class="card cert-card">
+                        <button type="button" class="cert-thumb" data-full="images/certificate-2.png"
+                            data-caption="Introduction to JavaScript - SoloLearn"
+                            aria-label="Open certificate 2 in a larger view">
+                            <img src="images/certificate-2.png" alt="SoloLearn certificate: Introduction to JavaScript"
+                                data-placeholder="Add certificate: images/certificate-2.png" width="600" height="420">
+                        </button>
+                        <div class="card-body">
+                                                        <h3>Introduction to JavaScript</h3>
+                            <p class="meta"><strong>Issued by:</strong> SoloLearn</p>
+                            <p class="meta"><strong>Completed:</strong> December 2025</p>
+                        </div>
+                    </article>
+
+                    <!-- TIP: To add more certificates, copy one whole <article> block above and paste it here. Change the image name too. -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== D. OJT / INTERNSHIP ===================== -->
+        <section id="ojt" class="section">
+            <div class="container">
+                <h2 class="section-title">OJT / Internship Experience</h2>
+
+                <article class="card ojt-card">
+                    <div class="ojt-info">
+                                                <h3>Municipal Tourism, Culture and Arts Office – LGU Bulan, Sorsogon</h3>
+                        <p class="meta"><strong>Role / Department:</strong> On-the-Job Training (OJT) Trainee</p>
+                        <p class="meta"><strong>Total Hours / Completed:</strong> 186 hours &bull; Certificate given August 7, 2026</p>
+
+                        <p>Completed 186 hours of On-the-Job Training at the Local Government Unit of Bulan, Sorsogon, as required by Sorsogon State University – Bulan Campus. The training built my knowledge, skills, and work values for career readiness and community engagement.</p>
+
+                        <h4>Tasks and Responsibilities</h4>
+                        <ul>
+                            <!-- EDIT: replace the 3 tasks and 3 skills below with what you really did in your OJT -->
+                            <li>[Task 1 you really did]</li>
+                            <li>[Task 2 you really did]</li>
+                            <li>[Task 3 you really did]</li>
+                        </ul>
+
+                        <h4>Skills Learned</h4>
+                        <div class="tags">
+                            <span class="tag">[Skill 1]</span>
+                            <span class="tag">[Skill 2]</span>
+                            <span class="tag">[Skill 3]</span>
+                        </div>
+
+                    </div>
+
+                    <div class="ojt-cert">
+                        <button type="button" class="cert-thumb" data-full="images/ojt-certificate.png"
+                            data-caption="OJT Certificate of Completion - LGU Bulan" aria-label="Open OJT certificate in a larger view">
+                            <img src="images/ojt-certificate.png" alt="OJT Certificate of Completion from LGU Bulan"
+                                data-placeholder="Add certificate: images/ojt-certificate.png" width="600" height="420">
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===================== E. SKILLS ===================== -->
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills-grid">
+
+                    <div class="card skill-group">
+                        <h3>Programming Languages &amp; Web Development</h3>
+                        <div class="badges">
+                            <span class="badge badge-blue">HTML</span>
+                            <span class="badge badge-blue">CSS</span>
+                            <span class="badge badge-blue">JavaScript</span>
+                            <span class="badge badge-purple">Python</span>
+                            <span class="badge badge-purple">Java</span>
+                            <span class="badge badge-purple">C / C++</span>
+                            <span class="badge badge-purple">PHP</span>
+                            <span class="badge badge-teal">Responsive Design</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-group">
+                        <h3>Database &amp; Development Tools</h3>
+                        <div class="badges">
+                            <span class="badge badge-teal">Database Basics</span>
+                            <span class="badge badge-teal">SQL / MySQL</span>
+                            <span class="badge badge-blue">Git</span>
+                            <span class="badge badge-blue">GitHub</span>
+                            <span class="badge badge-blue">VS Code</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-group">
+                        <h3>Productivity Tools</h3>
+                        <div class="badges">
+                            <span class="badge badge-purple">Microsoft Word</span>
+                            <span class="badge badge-purple">Microsoft Excel</span>
+                            <span class="badge badge-purple">Microsoft PowerPoint</span>
+                            <span class="badge badge-purple">Google Workspace</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-group">
+                        <h3>Soft Skills</h3>
+                        <div class="badges">
+                            <span class="badge badge-teal">Teamwork</span>
+                            <span class="badge badge-teal">Communication</span>
+                            <span class="badge badge-teal">Problem-Solving</span>
+                            <span class="badge badge-teal">Time Management</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== F. CONTACT ===================== -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Contact Me</h2>
+
+                <div class="contact-grid">
+
+                    <div class="card contact-info">
+                        <h3>Let's connect</h3>
+                        <p>Send me a message or find me on these sites.</p>
+                        <ul class="contact-list">
+                            <li><strong>Email:</strong> <a id="myEmail"
+                                    href="mailto:erich.gerero@sorsu.edu.ph">erich.gerero@sorsu.edu.ph</a></li>
+                            <li><strong>Phone:</strong> <a href="tel:09483947347">09483947347</a></li>
+                            <li><strong>GitHub:</strong> <a href="https://github.com/Rie1256" target="_blank" rel="noopener noreferrer">github.com/Rie1256</a></li>
+                        </ul>
+                    </div>
+
+                    <form class="card contact-form" id="contactForm" action="#" method="get">
+                        <h3>Send a message</h3>
+
+                        <div class="form-group">
+                            <label for="name">Name <span aria-hidden="true">*</span></label>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
+                            <p class="error" id="nameError" role="alert"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email <span aria-hidden="true">*</span></label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                            <p class="error" id="emailError" role="alert"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message <span aria-hidden="true">*</span></label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <p class="error" id="messageError" role="alert"></p>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Check My Message</button>
+
+                        <!-- The result message appears here -->
+                        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+
+                        <noscript>
+                            <p class="form-note">JavaScript is turned off, so this form cannot work. Please use the
+                                email link instead.</p>
+                        </noscript>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <!-- The year is added automatically by JavaScript. The text 2026 is only shown if JavaScript is off. -->
+            <p>&copy; <span id="year">2026</span> Erich C. Gerero. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="https://github.com/Rie1256" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+
+    <!-- Small message box shown when a placeholder link is clicked -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- Image viewer (modal) for certificates -->
+    <div class="modal" id="imageModal" hidden role="dialog" aria-modal="true" aria-label="Certificate preview">
+        <button type="button" class="modal-close" id="modalClose" aria-label="Close preview">&times;</button>
+        <div class="modal-body">
+            <img id="modalImage" alt="">
+            <p class="modal-missing" id="modalMissing" hidden>This image was not found. Add the file to the images
+                folder.</p>
+            <p class="modal-caption" id="modalCaption"></p>
+        </div>
+    </div>
+
+    <!-- Link to our JavaScript file (at the end so the page loads first) -->
+    <script src="script.js"></script>
+</body>
+
+</html>
